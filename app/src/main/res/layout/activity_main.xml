@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_escolha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Esdolha do app"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="32dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@null"
+        android:src="@drawable/padrao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_escolha" />
+
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Você perdeu :("
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_result" />
+
+    <ImageView
+        android:id="@+id/img_pedra"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginVertical="32dp"
+        android:contentDescription="@null"
+        android:onClick="selecionarPedra"
+        android:src="@drawable/pedra"
+        app:layout_constraintEnd_toStartOf="@id/img_papel"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_result" />
+
+
+    <ImageView
+        android:id="@+id/img_papel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginVertical="32dp"
+        android:contentDescription="@null"
+        android:onClick="selecionarPapel"
+        android:src="@drawable/papel"
+        app:layout_constraintEnd_toStartOf="@id/img_tesoura"
+        app:layout_constraintStart_toEndOf="@id/img_pedra"
+        app:layout_constraintTop_toBottomOf="@id/txt_result" />
+
+    <ImageView
+        android:id="@+id/img_tesoura"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginVertical="32dp"
+        android:contentDescription="@null"
+        android:onClick="selecionarTesoura"
+        android:src="@drawable/tesoura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_papel"
+        app:layout_constraintTop_toBottomOf="@id/txt_result" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
